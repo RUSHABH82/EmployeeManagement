@@ -1,0 +1,34 @@
+type Employee{
+    id: ID!
+    name: String!
+    Salary: Int
+    department: Department
+}
+
+type Department{
+    id: ID!
+    name: String!
+    employees: [Employee]
+}
+
+type Query {
+    getEmployeesByName(name: String!): [Employee]
+    getAllDepartment: [Department]
+    allEmployee: [Employee]
+}
+
+type Mutation{
+    addEmployee( addEmployeeRequest: AddEmployeeRequest ): Employee
+    updateSalary( updateSalaryRequest: UpdateSalaryRequest ): Employee
+}
+
+input AddEmployeeRequest{
+    name:String
+    salary: Int
+    departmentId:ID!
+}
+
+input UpdateSalaryRequest{
+    employeeId:ID!
+    salary: Int!
+}
