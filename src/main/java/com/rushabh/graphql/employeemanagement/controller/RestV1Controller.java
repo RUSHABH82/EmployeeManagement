@@ -6,9 +6,6 @@ import com.rushabh.graphql.employeemanagement.entity.Department;
 import com.rushabh.graphql.employeemanagement.entity.Employee;
 import com.rushabh.graphql.employeemanagement.exception.EmployeeManagementException;
 import com.rushabh.graphql.employeemanagement.service.IEmployeeService;
-import org.springframework.graphql.data.method.annotation.Argument;
-import org.springframework.graphql.data.method.annotation.MutationMapping;
-import org.springframework.graphql.data.method.annotation.QueryMapping;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
